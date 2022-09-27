@@ -11,6 +11,7 @@ About.html -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>Daniel Liu's Personal Website</title>
+    <meta name="author" content="Daniel Liu">
 </head>
 <body>
     <div class="splash-page">
@@ -19,9 +20,9 @@ About.html -->
                 <a href="about.html"><img src="assets/logo.png" alt="Daniel Liu Heading"></a>
             </div>
             <div class="nav">
-                <a href="about.html"><div class="nav-button">About</div></a>
-                <a href="portfolio.html"><div class="nav-button">Portfolio</div></a>
-                <a href="contact.html"><div class="nav-button">Contact</div></a>
+                <a href="about.html"><h5 class="nav-button">About</h5></a>
+                <a href="portfolio.html"><h5 class="nav-button">Portfolio</h5></a>
+                <a href="contact.html"><h5 class="nav-button">Contact</h5></a>
             </div>
         </div>
         <div class="parallax"></div>
@@ -29,8 +30,8 @@ About.html -->
         <div class="headline">
             <h2 class="headline-main">Hi! 👋 I'm Daniel, and I'm a Computer Science student at UC Berkeley.</h2>
             <span class="headline-sub-container">
-                <a href="contact.html"><div class="contact-button">Contact me here!</div></a>
-                <p class="headline-sub">Thanks for stopping by! Feel free to take a look around my website.😊</p>
+                <a href="contact.html"><button class="contact-button" onclick="onContactButtonPress()">Contact me here!</button></a>
+                <h6 class="headline-sub">Thanks for stopping by! Feel free to take a look around my website.😊</h6>
             </span>
             <div class="arrow-container">
                 <div class="arrow arrow-top"></div>
@@ -52,5 +53,10 @@ About.html -->
             <p class="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet sapien a tellus lacinia efficitur. Curabitur sagittis nisi eget elit varius lacinia. Praesent eget elit in erat rutrum condimentum. Ut sit amet dolor efficitur, lobortis justo et, molestie leo. In dignissim congue magna id tempus. Cras ut erat vel turpis gravida facilisis eu et arcu. Nulla eget rutrum dui.</p>
         </div>
     </div>
+    <script>
+        onContactButtonPress = () => {
+            alert('Make sure to fill out the feedback form!')
+        }
+    </script>
 </body>
 </html>

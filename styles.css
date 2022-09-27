@@ -125,6 +125,8 @@ a {
     background-color: var(--black-0);
     color: var(--white-0);
     text-align: center;
+    text-decoration: none;
+    border: none;
 }
 
 .contact-button:hover {
@@ -135,7 +137,7 @@ a {
 
 /* Parallax and Welcome Message */
 .parallax {
-    background-image: url("background.png");
+    background-image: url("assets/background.png");
     min-height: 500px;
     filter: blur(8px);
     -webkit-filter: blur(8px);
@@ -190,15 +192,13 @@ a {
 }
 
 .proj-col {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-column: 1;
 }
 
 .proj-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    align-self: stretch;
+    display: grid;
+    grid-row: 1;
     padding: 5px;
 }
 
@@ -207,16 +207,16 @@ a {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     background-color: var(--white-0);
     border-radius: var(--border-radius);
-    flex: 1 1 0px;
     margin: 10px;
+    padding: 4px;
 }
 
 .proj-image {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    padding: auto;
     background-color: var(--white-0);
     border-radius: var(--border-radius);
     margin: 10px;
+    text-align: center;
 }
 
 .proj-p {
@@ -224,8 +224,8 @@ a {
     text-align: left;
     background-color: var(--white-0);
     border-radius: var(--border-radius);
-    flex: 4 4 0px;
     margin: 10px;
+    padding: 4px;
 }
 
 /* Contact Page */
@@ -246,9 +246,10 @@ a {
 
 .contact {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    flex-direction: column;
-    align-items: space-between;
+    flex-direction: row;
+    align-items: space-around;
     background-color: var(--white-0);
     margin-left: 50%;
     -webkit-transform: translateX(-50%);
@@ -256,9 +257,17 @@ a {
     border-radius: var(--border-radius);
 }
 
+.contact-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: space-evenly;
+    margin: 10px;
+}
+
 .contact-group {
     display: flex;
-    margin-left: 10%;
+    align-items: flex-start;
     margin-top: 4px;
     margin-bottom: 4px;
 }
@@ -285,6 +294,27 @@ a {
     background-color: var(--cyan-0)
 }
 
+.contact-form {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: var(--white-1);
+    border-radius: var(--border-radius);
+}
+
+#submit-button {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-top: 4px;
+    border: none;
+    color: var(--black-0);
+    background-color: var(--white-2);
+    text-align: center;
+    text-decoration: none;
+}
+
+#submit-button:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color: var(--cyan-0)
+}
+
 /* About Page */
 .about-header {
     align-self: center;
@@ -306,6 +336,7 @@ a {
     flex-direction: row;
     align-items: stretch;
     justify-content: stretch;
+    flex-wrap: wrap;
 }
 
 .about-col {
@@ -313,9 +344,11 @@ a {
     flex-direction: column;
     align-items: space-between;
     justify-content: center;
-    margin: auto;
+    flex-wrap: wrap;
+    margin-top: auto;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 5%;
     background-color: var(--white-0);
     border-radius: var(--border-radius);
 }
